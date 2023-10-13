@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function addItem() {
+            let newele = prompt("Enter the new element text");
+            let newnode = document.createElement("li");
+            newnode.innerText = newele;
+            let exisele = prompt("Enter the element after which you want to add");
+            let myul = document.querySelector("ul");
+            let all_li = myul.querySelectorAll("li");
+            all_li.forEach(item => {
+                let str = item.innerText;
+                if (str == exisele) {
+                    if (item.nextElementSibling != null) {
+                        myul.insertBefore(newnode, item.nextElementSibling);
+                    } else {
+                        myul.appendChild(newnode);
+                    }
+                    alert("Element added");
+                    return;
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h3>My Favourite Colors</h3>
+    <ul id="colors">
+        <li>RED</li>
+        <li>BLUE</li>
+    </ul>
+    <input type="button" value="add new item" onclick="addItem()">
+</body>
+
+</html>

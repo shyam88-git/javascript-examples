@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Function Demo</title>
+    <script>
+        let x = 1;
+
+        function printNos() {
+
+            document.write(`${x}<br>`);
+            x++;
+            if (x == 11) {
+                clearInterval(y);
+                document.write("Done!!");
+            }
+        }
+        let y = setInterval(printNos, 1000);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

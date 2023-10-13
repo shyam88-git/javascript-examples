@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function setTimer() {
+            let div = document.querySelector("div");
+            div.style.fontSize = "30px";
+            div.style.fontWeight = "bold";
+            setInterval(() => {
+                let now = new Date();
+                let timeStr = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                div.innerText = timeStr;
+            }, 1000);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Show Timer" onclick="setTimer()">
+    <div id="d1">
+
+    </div>
+
+
+</body>
+
+</html>

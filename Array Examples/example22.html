@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Array Demo</title>
+    <script>
+        let names = [];
+        let i;
+        for (i = 0; i < 10; i++) {
+            names[i] = prompt("Enter name");
+        }
+        document.write("Names are:<br>");
+        for (let x of names)
+            document.write(`${x}<br>`);
+
+        let str = prompt("Enter name to search:");
+        let index = 0,
+            pos;
+        while (true) {
+            pos = names.indexOf(str, index);
+            if (pos == -1)
+                break;
+
+            document.write(`${str} is at pos ${pos}<br>`);
+            index = pos + 1;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

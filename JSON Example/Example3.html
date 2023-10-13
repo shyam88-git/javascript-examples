@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Storing JSON -->
+</head>
+<body>
+    <script>
+
+        const Person={name:"John",age:30};
+        localStorage.setItem("createJson",JSON.stringify(Person));
+        let storedData=localStorage.getItem('createJson');
+        let parseData=JSON.parse(storedData);
+
+        console.log(parseData.name);
+        console.log(parseData.age);
+    </script>
+    
+</body>
+</html>

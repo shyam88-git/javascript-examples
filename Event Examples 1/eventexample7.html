@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Event Demo</title>
+    <script>
+        function verify() {
+            let result = confirm("Are u sure you want to leave this page");
+            if (result == true)
+                return true;
+            else
+                return false;
+        }
+    </script>
+</head>
+
+<body>
+    <a href="http://www.facebook.com" onclick="return(verify())">Click Me To Visit Facebook</a>
+</body>
+
+</html>

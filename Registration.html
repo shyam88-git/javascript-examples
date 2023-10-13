@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Tangerine&display=swap" rel="stylesheet" />
+  <link href="/CSS/mystyles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Register New Account</h1>
+  <form action="index.html" onsubmit="return (validate())" method="POST"  name="frm" autocomplete="off">
+    <div id="container">
+      <div class="input-group">
+        <label for="profile-pic">Select Profile Picture:</label>
+        <input type="file" id="profile-pic" name="profile-pic" accept=".png, .jpg, .jpeg, .gif" required>
+      </div>
+      <div class="input-group">
+        <fieldset>
+          <legend>Activities</legend>
+          <label for="buy">Buy</label>
+          <input type="checkbox" id="buy" name="buy" value="coding" />
+          <label for="invest">Invest</label>
+          <input type="checkbox" id="invest" name="invest" value="invest" />
+          <label for="partner">Partner</label>
+          <input type="checkbox" id="art" name="partner" value="partner" />
+          <label for="lease">Lease</label>
+          <input type="checkbox" id="lease" name="lease" value="lease" />
+          <label for="franchise">Franchise</label>
+          <input type="checkbox" id="franchise" name="franchise" value="franchise" />
+        </fieldset>
+      </div>
+      <div class="input-group">
+        <label for="address">Location:</label>
+        <select multiple size="5">
+          <option value="Delhi">Delhi</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Mumbai">Mumbai</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="funding-source">Funding Source</label>
+        <input type="radio" name="own" id="own" value="Own">Own
+        <input type="radio" name="own" id="family-bank" value="Family &amp; Friend">Family &amp; Friend
+        <input type="radio" name="own" id="bank" value="Bank">Bank Loan
+        <input type="radio" name="own" id="external-investors" value="External Investors">External Investors
+      </div>
+      <div class="input-group">
+        <label>Mobile</label>
+        <input type="tel" name="mobile" id="mobile"  placeholder="Enter mobile number" maxlength="10" pattern="[0-9]{10}">
+      </div>
+      <div class="input-group">
+        <label>Zip Code</label>
+        <input type="text" name="zip-code" id="zip-code" placeholder="Enter zip code"maxlength="6" pattern="[0-9]{5}">
+      </div>
+      <div class="input-group">
+        <label>Company Name</label>
+        <input type="text" id="company_name" name="company-name" placeholder="Enter Company name">
+      </div>
+      <div class="input-group">
+        <label for="skills">Skills:</label>
+        <div id="tags-container" class="tag-container">
+          <div class="tag">Marketing<span class="tag-close-btn" onclick="removeTag(this)">&times;</span></div>
+          <div class="tag">Electronics<span class="tag-close-btn" onclick="removeTag(this)">&times;</span></div>
+          <div class="tag">Culinary<span class="tag-close-btn" onclick="removeTag(this)">&times;</span></div>
+        </div>
+        <input type="text" id="tags-input" placeholder="Enter skills" onkeydown="handleTagInput(event)">
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" required>
+        <label>I agree to have read the <a href="#">terms of service</a></label>
+      </div>
+      <div class="button-group">
+        <input id="register" type="submit" name="submit" value="Register">
+      </div>
+    </div>
+  </form>
+  <script src="/JS/Skill.js">
+    
+   
+  </script>
+</body>
+
+</html>

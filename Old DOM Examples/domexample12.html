@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Java Script Demo</title>
+<script >
+    function changeText(){
+        let inputs=document.getElementsByClassName("highlight");
+        for(let i=0;i<inputs.length;i++)
+            if(inputs[i].getAttribute("type")=="button"){
+                inputs[i].setAttribute("value","Next");
+            }
+
+    }
+
+</script>
+</head>
+<body>
+
+<input type="button" class="highlight" value="add link" onclick="changeText();" ><br>
+<input type="text" class="highlight" ><br>
+<p id="p1">
+
+</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Do-While Loop Demo</title>
+    <script>
+        let currYear = 2020;
+        let age;
+        do {
+            let birthYear = Number(prompt("Enter your birthyear:"));
+            age = currYear - birthYear;
+            if (age > 0) {
+                document.write(`Your age is ${age} years<br>`);
+                if (age >= 18)
+                    document.write("You are eligible to vote");
+                else
+                    document.write("You are not eligible to vote");
+                break;
+            }
+            alert("Invalid age. Try again");
+        } while (age <= 0);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

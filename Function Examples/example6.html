@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Function Demo</title>
+    <script>
+        let a = 5;
+
+        function f1() {
+            var a = 10;
+            alert("in f1 a is " + a);
+            alert("global a is " + window.a);
+
+        }
+
+        function f2() {
+            var a = 20;
+            alert("in f2 a is " + a);
+            alert("global a is " + window.a);
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center;font-size: 120%;font-weight: bold">
+        To call the f1 <a href="JavaScript:f1( )">Click</a> here.<br> To call the f2 <a href="JavaScript:f2( )">Click</a> here.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Understanding innerHTML</title>
+    <script>
+        function showContactForm() {
+            let div = document.querySelector("div");
+            div.innerHTML = "<h3>Contact Form</h3>";
+            div.innerHTML += "<form action='contact.py'>";
+            div.innerHTML += "<input type='text' placeholder='your name'>";
+            div.innerHTML += "<br><input type='phone' placeholder='your phone no'>";
+            div.innerHTML += "<br><input type='submit' value='Save'>";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Get In Touch</h3>
+    <input type="button" value="Show Contact Form" onclick="showContactForm()" />
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Ternary demo</title>
+    <script>
+        let a;
+        a = prompt("enter a number");
+        if (isNaN(a)) {
+            document.write("Please input digits only");
+        } else {
+            a = Number(a);
+            let b = (a >= 0) ? a : -a;
+            document.write(`Absolute of ${a} is ${b}`);
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

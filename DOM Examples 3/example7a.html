@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function addList() {
+            let languages = ["C", "C++", "Java", "PHP", "JavaScript", ".Net"];
+            let mylist = document.createElement("ul");
+            languages.forEach(name => {
+                mylist.innerHTML += "<li>" + name + "</li>";
+            });
+            document.getElementById("d1").appendChild(mylist);
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1">
+
+    </div>
+    <input type="button" value="show languages" onclick="addList()">
+
+</body>
+
+</html>

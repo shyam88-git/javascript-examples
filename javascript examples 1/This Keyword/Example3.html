@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Example</title>
+</head>
+<body>
+  <button id="myButton">Click me!</button>
+
+  <script>
+    const button = document.getElementById('myButton');
+    
+    // Event handler function
+    function handleClick() {
+      console.log('Button clicked');
+      console.log('Clicked button:', this); // 'this' refers to the button element
+    }
+
+    // Attach event listener
+    button.addEventListener('click', handleClick);
+  </script>
+</body>
+</html>

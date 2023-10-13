@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Underatnding classList</title>
+    <link rel="stylesheet" type="text/css" href="mystyles.css">
+    <script>
+        function decorate() {
+            let paras = document.querySelectorAll("p");
+            paras.forEach(p => {
+                if (p.innerText.indexOf("success") != -1)
+                    p.classList.add("success");
+                else if (p.innerText.indexOf("error") != -1)
+                    p.classList.add("error");
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>Lorem ipsum, success dolor sit amet consectetur adipisicing elit. Quibusdam molestiae quidem quis tempore excepturi dolore labore, delectus necessitatibus inventore fugit vel hic, eum at beatae mollitia impedit! Deserunt, nihil!
+    </p>
+    <p>Lorem ipsum, error dolor sit amet consectetur adipisicing elit. Quibusdam molestiae quidem quis tempore excepturi dolore labore, delectus necessitatibus inventore fugit vel hic, eum at beatae mollitia impedit! Deserunt, nihil!
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam molestiae quidem quis tempore excepturi dolore labore, delectus necessitatibus inventore fugit vel hic, eum at beatae error mollitia impedit! Deserunt, error
+    </p>
+    <p>Lorem success ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam molestiae quidem quis tempore excepturi dolore labore, delectus necessitatibus inventore fugit vel hic, eum at beatae mollitia impedit! Deserunt, nihil!
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam molestiae quidem quis tempore excepturi dolore labore, delectus necessitatibus inventore fugit vel hic, eum at beatae mollitia impedit! Deserunt, nihil!
+    </p>
+    <input type="button" value="Add class" onclick="decorate();">
+
+</body>
+
+</html>

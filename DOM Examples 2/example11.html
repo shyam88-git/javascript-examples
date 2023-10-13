@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Understanding style</title>
+    <script>
+        function showDate() {
+            //Write code to insert current system date in the <p> tag
+            let p = document.querySelector('p')
+            let today = new Date()
+            p.innerText =
+                today.getDate() +
+                '-' +
+                (today.getMonth() + 1) +
+                '-' +
+                today.getFullYear()
+            p.style.color = 'crimson'
+            p.style.fontWeight = 'bold'
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        Click the button to display current date
+    </p>
+    <input type="button" value="show date" onclick="showDate();" />
+</body>
+
+</html>

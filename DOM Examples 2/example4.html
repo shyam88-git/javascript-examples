@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Understanding innerText</title>
+    <script>
+        function addNewCourse() {
+            //Write code to add new course to the list
+            let course = prompt("Enter course name");
+            let ul = document.querySelector("ul");
+            alert(ul.innerHTML);
+            ul.innerHTML += "<li>" + course + "</li>";
+            alert(ul.innerHTML);
+
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Welcome To SCA</h2>
+    <h3>Our Mission</h3>
+    <p>The mission of the SHARMA COMPUTER ACADEMY is to provide its students with the foundation for lifelong learning
+    </p>
+    <h3>Our Courses</h3>
+    <ul>
+        <li>C </li>
+        <li>C++</li>
+        <li>Python </li>
+        <li>Django</li>
+        <li>Java</li>
+        <li>Oracle</li>
+    </ul>
+    <input type="button" value="Click me" onclick="addNewCourse()" />
+</body>
+
+</html>
